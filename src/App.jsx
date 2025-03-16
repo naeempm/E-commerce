@@ -9,9 +9,11 @@ import Cart from "./pages/cart";
 import Login from "./pages/Login";
 import PlaceOrder from "./pages/PlaceOrder";
 import Orders from "./pages/Orders";
+import Navbar from "./components/Navbar";
 function App(){
   return(
-    <div>
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <Navbar/>
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>}/>
@@ -19,7 +21,7 @@ function App(){
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/product/:productid" element={<Product/>}/>
       <Route path="/cart" element={<Cart/>}/>
-      <Route path="/login" element={Login/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route path="/placeorder" element={<PlaceOrder/>}/>
       <Route path="/orders" element={<Orders/>}/>
     </Routes>
